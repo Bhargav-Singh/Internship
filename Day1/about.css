@@ -1,0 +1,24 @@
+p.nav {
+    background-color: #293241;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    padding: 10px;
+    padding-left: 20px;
+    margin-top: 0px;
+}
+
+p.nav a {
+    color: white;
+}
+
+p.nav a:hover {
+    color: #e07a5f;
+}
+
+p.txt {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    padding: 10px;
+    color: #e07a5f;
+}
