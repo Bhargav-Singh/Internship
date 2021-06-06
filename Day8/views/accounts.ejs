@@ -1,0 +1,45 @@
+<a href="/users">
+    <input type="button" value="Add User">
+</a>
+
+<br><br>
+<% if (db_rows_array.length >0){ %>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th> Name</th>
+            <th> Password</th>
+            <th>Address</th>
+            <th>Gender</th>
+            <th>Action</th>
+        </tr>
+
+        <% for(var i=0; i< db_rows_array.length; i++){ %>
+            <tr>
+                <td>
+                    <%= db_rows_array[i].id %>
+                </td>
+                <td>
+                    <%= db_rows_array[i].name %>
+                </td>
+                <td>
+                    <%= db_rows_array[i].password %>
+                </td>
+                <td>
+                    <%= db_rows_array[i].address %>
+                </td>
+
+                <td>
+                    <%= db_rows_array[i].sex %>
+                </td>
+
+                <td>
+                    Edit| <a href="/delete">Delete</a>
+                </td>
+            </tr>
+            <% } %>
+    </table>
+
+    <% } else{ %>
+        No records Found!
+        <% } %>

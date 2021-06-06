@@ -1,0 +1,47 @@
+<a href="/student">
+    <input type="button" value="Add student">
+</a>
+
+<br><br>
+<% if (db_rows_array.length >0){ %>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Marks</th>
+            <th>Branch</th>
+            <th>Action</th>
+        </tr>
+
+        <% for(var i=0; i< db_rows_array.length; i++){ %>
+            <tr>
+                <td>
+                    <%= db_rows_array[i].id %>
+                </td>
+                <td>
+                    <%= db_rows_array[i].name %>
+                </td>
+                <td>
+                    <%= db_rows_array[i].email %>
+                </td>
+                <td>
+                    <%= db_rows_array[i].age %>
+                </td>
+                <td>
+                    <%= db_rows_array[i].marks %>
+                </td>
+                <td>
+                    <%= db_rows_array[i].branch %>
+                </td>
+                <td>
+                    Edit| <a href="/delete">Delete</a>
+                </td>
+            </tr>
+            <% } %>
+    </table>
+
+    <% } else{ %>
+        No records Found!
+        <% } %>

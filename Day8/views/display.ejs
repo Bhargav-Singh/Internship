@@ -1,0 +1,39 @@
+<a href="/add">
+    <input type="button" value="Add Product">
+</a>
+
+<br><br>
+<% if (db_rows_array.length >0){ %>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Book Name</th>
+            <th>Author Name</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+
+        <% for(var i=0; i< db_rows_array.length; i++){ %>
+            <tr>
+                <td>
+                    <%= db_rows_array[i].id %>
+                </td>
+                <td>
+                    <%= db_rows_array[i].name %>
+                </td>
+                <td>
+                    <%= db_rows_array[i].details %>
+                </td>
+                <td>
+                    <%= db_rows_array[i].price %>
+                </td>
+                <td>
+                    Edit| <a href="/delete">Delete</a>
+                </td>
+            </tr>
+            <% } %>
+    </table>
+
+    <% } else{ %>
+        No records Found!
+        <% } %>

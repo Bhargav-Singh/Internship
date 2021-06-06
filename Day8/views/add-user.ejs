@@ -1,0 +1,37 @@
+<html>
+
+<body>
+    <h1>Add Users</h1>
+    <form method="POST" action="users/user-process">
+        <table>
+            <tr>
+                <td><label> Name:</label></td>
+                <td> <input type="text" name="name" required /></td>
+            </tr>
+
+            <tr>
+                <td><label>Password:</label></td>
+                <td><input type="password" name="psw" required /></td>
+            </tr>
+
+            <tr>
+                <td> <label> Address:</label></td>
+                <td> <textarea name="add" rows="3" cols="20"></textarea></td>
+            </tr>
+
+            <tr>
+                <td> <label> Gender:</label></td>
+                <td><input type="radio" name="sex" value="male" required/>male
+                    <input type="radio" name="sex" value="female" required/>Female
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="1"></td>
+                <td><input type="submit" /></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
