@@ -35,7 +35,7 @@ router.get('/contact-process', function(req, res, next) {
     var email = req.body.email;
     var msg = req.body.message;
 
-    res.render('ans', { name: name, email: email, msg: msg });
+    res.render('response', { name: name, email: email, msg: msg });
 });
 
 router.get('/admin', function(req, res, next) {
