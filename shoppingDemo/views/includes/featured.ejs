@@ -1,0 +1,24 @@
+<% if (db_rows_array.length >0){ %>
+    <section class="tiles">
+        <% for(var i=0; i< db_rows_array.length; i++){ %>
+            <article class="style1">
+                <span class="image">
+                    <img src="/images/product-1-720x480.jpg" alt="" />
+                </span>
+                <a href="/products/<%= db_rows_array[i].id %>">
+                    <h2>
+                        <%= db_rows_array[i].title %>
+                    </h2>
+                    <p>$<strong><%= db_rows_array[i].price %></strong></p>
+                    <p><strong><%= db_rows_array[i].author %></strong></p>
+                    <p>
+                        <%= db_rows_array[i].description.substring(0,64) %>
+                    </p>
+                </a>
+            </article>
+            <% } %>
+    </section>
+
+    <% } else{ %>
+        <h2><em>No Products were found.</em></h2>
+        <% } %>
