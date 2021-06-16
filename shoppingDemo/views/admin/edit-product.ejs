@@ -1,0 +1,49 @@
+<%- include('../includes/head.ejs') %>
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+            <h1>Update Product</h1>
+            <form method="post">
+                <div class="fields">
+                    <div class="field half">
+                        <input type="text" name="title" id="field-2" placeholder="Book Name" value="<%= db_rows_array[0].title %>" required />
+                    </div>
+
+                    <div class="field half">
+                        <input type="text" name="author" id="field-3" placeholder="Author Name" value="<%= db_rows_array[0].author %>" required />
+                    </div>
+
+                    <div class="field half">
+                        <input type="number" name="price" id="field-4" placeholder="Price" value="<%= db_rows_array[0].price %>" required />
+                    </div>
+
+                    <div class="field half">
+                        <input type="text" name="description" id="field-5" placeholder="Description" value="<%= db_rows_array[0].description %>" required />
+                    </div>
+
+                    <div class="field half text-right">
+                        <ul class="actions">
+                            <li><input type="submit" value="Update" class="primary"></li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <section>
+                <%- include('../includes/footer.ejs') %>
+        </div>
+    </footer>
+
+    </div>
+
+    <!-- Scripts -->
+
+    <%- include('../includes/scripts.ejs') %>
+        </body>
+
+        </html>
