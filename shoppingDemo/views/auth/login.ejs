@@ -1,0 +1,51 @@
+<%- include('../includes/head.ejs') %>
+    <!-- Main -->
+
+    <div id="main">
+        <div class="inner">
+            <h1>Login</h1>
+
+            <form action="/login" method="post">
+                <div class="fields">
+                    <div class="field half">
+                        <input type="email" name="email" id="email" placeholder="Email" />
+                    </div>
+
+                    <div class="field half">
+                        <input type="password" name="password" id="password" placeholder="password" />
+                    </div>
+
+                    <div class="field half text-right">
+                        <ul class="actions">
+                            <li>
+                                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                <input type="submit" class="primary" value="Login">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+            <% if (errorMessage) { %>
+                <div class="user-message user-message--error">
+                    <%= errorMessage %>
+                </div>
+                <% } %>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <section>
+                <%- include('../includes/footer.ejs') %>
+        </div>
+    </footer>
+
+    </div>
+
+    <!-- Scripts -->
+
+    <%- include('../includes/scripts.ejs') %>
+        </body>
+
+        </html>
