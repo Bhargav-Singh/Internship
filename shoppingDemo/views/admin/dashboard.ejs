@@ -10,8 +10,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
     <style type="text/css">
         .wrapper {
-            width: 650px;
-            margin: 0 auto;
+            width: auto;
+            margin: 0;
         }
         
         .page-header h2 {
@@ -36,15 +36,19 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Title</th>
-                                    <th>Author Name</th>
+                                    <th>Author</th>
                                     <th>Price</th>
                                     <th>Description</th>
+                                    <th> Imgage URL</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <% for (let product of prods) { %>
                                     <tr>
+                                        <td>
+                                            <%= product._id %>
+                                        </td>
                                         <td>
                                             <%= product.title %>
                                         </td>
@@ -55,10 +59,10 @@
                                             <%= product.price %>
                                         </td>
                                         <td>
-                                            <%= product.description %>
+                                            <%= product.description.substring(0,64) %>
                                         </td>
                                         <td>
-                                            <%= product.imgUrl %>
+                                            <%= product.imgUrl.substring(0,64) %>
                                         </td>
                                         <td>
                                             <a href='products/<%= product._id %>' title='View Record' data-toggle='tooltip'>
